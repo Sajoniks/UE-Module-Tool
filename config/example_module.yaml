@@ -1,0 +1,20 @@
+project:
+  copyright:
+    text: |
+      Example copyright text that will be placed at the top 
+      of the each generated file. 
+      Generator is aware of the line breaks.
+
+    use_unreal: false # this indicates, if the copyright will be read from the engine's
+                      # project settings.
+                      # note: text is ignored, if this setting is set to "true"
+
+modules:
+  - name: ExamplePlugin
+    type: Runtime
+    loading_phase: Default
+
+    dependencies:
+      public:  [Core, CoreUObject, Engine, InputCore]   # evaluates to PublicDependencyModuleNames
+      private: [GameplayTags, UMG, DeveloperSettings]   # evaluates to PrivateDependencyModuleNames
+
